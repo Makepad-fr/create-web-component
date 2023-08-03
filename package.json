@@ -1,0 +1,43 @@
+{
+  "name": "@makepad/create-web-component",
+  "version": "1.0.0",
+  "description": "Creates a new web component with no configuration",
+  "main": "dist/index.mjs",
+  "module": "true",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc -p tsconfig.json",
+    "build:watch": "./node_modules/.bin/tsc -p tsconfig.json --watch",
+    "prepublish": "npm run build"
+  },
+  "bin": {
+    "create-web-component": "dist/index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Makepad-fr/create-web-component.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "JavaScript",
+    "WebComponents",
+    "build-tools",
+    "zero-configuration",
+    "cli"
+  ],
+  "author": "Makepad Developers <dev@makepad.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Makepad-fr/create-web-component/issues"
+  },
+  "homepage": "https://github.com/Makepad-fr/create-web-component#readme",
+  "dependencies": {
+    "@inquirer/confirm": "^2.0.7",
+    "@inquirer/input": "^1.2.6",
+    "ejs": "^3.1.9",
+    "ora": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.2",
+    "typescript": "5.1.6"
+  }
+}

@@ -1,0 +1,24 @@
+
+const COMPONENT_NAME = '<%=componentName%>';
+const COMPONTN_STYLES = `
+div {
+    background-color: black;
+    color: yellow;
+}
+`
+class <%=componentClassName%> extends HTMLElement {
+    constructor() {
+        super();
+
+        const shadow = this.attachShadow({ mode: 'open' });
+
+        const wrapper = document.createElement('div');
+        const style = document.createElement('style');
+        style.textContent = COMPONTN_STYLES;
+        wrapper.textContent = 'Hello, Web Component!';
+        shadow.appendChild(wrapper);
+        shadow.appendChild(style);
+    }
+}
+
+customElements.define(COMPONENT_NAME, <%=componentClassName%>);
